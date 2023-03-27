@@ -228,7 +228,7 @@ class CityBreaksByNumberOfOtherAgenciesContract(generics.ListCreateAPIView):
         return query
 
 class AddCitybreaks(APIView):
-    def post(self, request, id):
+    def post(self, request):
         person = Person.objects.get(id=id)
         citBreaks_data = request.data['CityBreaks']
         citBreaks = []
