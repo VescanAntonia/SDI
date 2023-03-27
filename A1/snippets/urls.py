@@ -30,7 +30,7 @@ urlpatterns = [
 
 
     path("person/",PersonList.as_view()),
-    path("person/<int:pk>/",PersonDetail.as_view()),
+    path("person/<int:id>/",PersonDetail.as_view()),
     path("person/ids/",PersonIds.as_view()),
 
 
