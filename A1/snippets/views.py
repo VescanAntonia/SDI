@@ -236,4 +236,9 @@ class AddCitybreaks(APIView):
             citybreak = CityBreak.objects.create(product=person, text=citBreak_data['text'])
             citBreaks.append(citybreak)
         return Response({'citybreaks': citBreaks})
+       
+    def get(self, request):
+        obj = CityBreak.objects.all()
+        serializer = CityBreakSerializer(obj, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
