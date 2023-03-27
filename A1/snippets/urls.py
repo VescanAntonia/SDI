@@ -44,5 +44,5 @@ urlpatterns = [
     path("cit/filter/",CityBreaksWithPriceBiggerThanN.as_view()),
     path("cit/filter/<int:n>/",CityBreaksWithPriceBiggerThanN.as_view()),
 
-    path('person/<int:id>/cit/', AddCitybreaks.as_view()),
+    path('person/<int:parent_id>/cit/', AddCitybreaks.as_view()),
 ]
