@@ -233,7 +233,7 @@ class AddCitybreaks(APIView):
         msg = "CREATED"
 
         for sh in city_break_data:
-            sh['person'] = id
+            sh['cityBreak'] = id
             print(sh)
             serializer = CityBreakSerializer(data=sh)
             if serializer.is_valid():
