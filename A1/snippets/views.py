@@ -35,10 +35,10 @@ class CityBreaksInfo(APIView):
     def get(self,request,id):
         try:
             obj = CityBreak.objects.get(id=id)
+            print(obj)
         except CityBreak.DoesNotExist:
             msg = {"msg": "not found"}
             return Response(msg, status=status.HTTP_404_NOT_FOUND)
-        return Response(CityBreakSerializer.data, status=status.HTTP_200_OK)
 
     def patch(self,request):
         try:
