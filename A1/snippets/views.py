@@ -85,9 +85,7 @@ class PersonIds(generics.ListAPIView):
         return Response(serializer.data,status=status.HTTP_200_OK)
 
 class PersonDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset=Person.objects.all()
-    serializer_class=PersonSerializer
-    def get(self,request):
+    def get(self,request,id):
         try:
             obj = Person.objects.get(id=id)
         except Person.DoesNotExist:
