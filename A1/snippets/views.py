@@ -232,7 +232,7 @@ class AddCitybreaks(APIView):
     def post(self, request, id):
         city_break_data = request.data
         msg = "CREATED"
-
+        print(request.data)
         for sh in city_break_data:
             sh['person'] = id
             print(sh)
