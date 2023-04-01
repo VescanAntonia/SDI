@@ -32,7 +32,7 @@ class CityBreaksDetail(APIView):
 
 
 class CityBreaksInfo(APIView):
-    def get(self,request):
+    def get(self,request,id):
         try:
             obj = CityBreak.objects.get(id=id)
         except CityBreak.DoesNotExist:
