@@ -268,7 +268,7 @@ class AddCitybreaks(APIView):
     #
     #
     #
-    def get(self, request):
+    def get(self, request,id):
         obj = CityBreak.objects.filter(id=id)
         serializer = CityBreakSerializer(obj, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
