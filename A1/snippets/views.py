@@ -35,7 +35,7 @@ class CityBreaksInfo(APIView):
     def get(self,request,id):
         try:
             obj = CityBreak.objects.get(id=id)
-            print(obj)
+            return Response(obj, status=status.HTTP_200_OK)
         except CityBreak.DoesNotExist:
             msg = {"msg": "not found"}
             return Response(msg, status=status.HTTP_404_NOT_FOUND)
