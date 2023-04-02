@@ -13,7 +13,7 @@ from snippets.models import CityBreak,Person,TravelAgency
 from snippets.serializers import CityBreakSerializer,PersonSerializer,TravelAgencySerializer,PersonSerializerIds,TravelAgencySerializerIds
 from snippets.serializers import CityBreakAgencySerializer
 from snippets.models import CityBreakAgency
-from django.conf.urls import url
+from django.template.defaulttags import url
 from rest_framework_swagger.views import get_swagger_view
 
 schema_view = get_swagger_view(title='Pastebin API')
