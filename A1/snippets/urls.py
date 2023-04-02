@@ -19,7 +19,7 @@ import django_extensions
 from . import views
 from .views import CityBreaksDetail,CityBreaksWithPriceBiggerThanN,CityBreaksInfo,PersonDetail,PersonList,TravelAgencyDetail,TravelAgencyList,PersonIds,TravelAgencyIds
 #from .views import cityBreaksListView,cityBreaksDetailView
-from .views import CityBreakAgencyContract,TravelAgencyOrderedByAveragePriceOfCitybreak,CityBreaksByNumberOfOtherAgenciesContract,AddCitybreaks,schema_view
+from .views import CityBreakAgencyContract,TravelAgencyOrderedByAveragePriceOfCitybreak,CityBreaksByNumberOfOtherAgenciesContract,AddCitybreaks
 from rest_framework_swagger.views import get_swagger_view
 
 schema_view = get_swagger_view(title='Jaseci API')
