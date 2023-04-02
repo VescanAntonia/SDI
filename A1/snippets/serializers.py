@@ -10,7 +10,7 @@ class PersonSerializer(serializers.ModelSerializer):
         return value
     class Meta:
         model=Person
-        # fields='__all__'
+        fields='__all__'
         # fields=('id','first_name','last_name','age','gender','citybreak_id')
 
 class PersonSerializerIds(serializers.ModelSerializer):
