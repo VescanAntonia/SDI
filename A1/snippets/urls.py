@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import path,re_path
 import django_extensions
 from . import views
-from .views import CityBreaksDetail,CityBreaksWithPriceBiggerThanN,CityBreaksInfo,PersonDetail,PersonList,TravelAgencyDetail,TravelAgencyList,PersonIds,TravelAgencyIds
+from .views import *
+from snippets.views.CityBreakViews import CityBreaksDetail,CityBreaksWithPriceBiggerThanN,CityBreaksInfo,AddCitybreaks
+from snippets.views.PersonViews import PersonDetail,PersonList,PersonIds
+from snippets.views.TravelAgencyViews import TravelAgencyDetail,TravelAgencyList,TravelAgencyIds,TravelAgenciesWithMoreThan100Emplyees
+from snippets.views.CityBreakAgencyViews import CityBreakAgencyContract,TravelAgencyOrderedByAveragePriceOfCitybreak,CityBreaksByNumberOfOtherAgenciesContract
 #from .views import cityBreaksListView,cityBreaksDetailView
-from .views import CityBreakAgencyContract,TravelAgencyOrderedByAveragePriceOfCitybreak,CityBreaksByNumberOfOtherAgenciesContract,AddCitybreaks,TravelAgenciesWithMoreThan100Emplyees
+
 from rest_framework_swagger.views import get_swagger_view
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
@@ -54,7 +58,7 @@ urlpatterns = [
 
 
     path("person/",PersonList.as_view()),
-    path("person/<int:pk>/",PersonDetail.as_view()),
+    path("person/<int:id>/",PersonDetail.as_view()),
     path("person/ids/",PersonIds.as_view()),
 
 

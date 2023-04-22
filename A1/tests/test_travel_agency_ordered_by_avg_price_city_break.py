@@ -1,5 +1,7 @@
 from django.test import TestCase
-from snippets.models import TravelAgency,CityBreak,CityBreakAgency
+from snippets.models.TravelAgency import TravelAgency
+from snippets.models.CityBreak import CityBreak
+from snippets.models.CityBreakAgency import CityBreakAgency
 
 class TravelAgencyOrderedByCityBreakAvgPriceModelTestcase(TestCase):
     @classmethod
